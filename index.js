@@ -93,7 +93,7 @@ funcionOrdenar(ordenarNumeros, "asc");
 console.log(funcionOrdenar(ordenarNumeros, "asc"));
 
 
-            //---------> ↓↓↓↓↓↓↓↓ <-----------//
+//---------> ↓↓↓↓↓↓↓↓ <-----------//
 
 //Generar una tabla de multiplicar
 
@@ -106,7 +106,7 @@ const tablaMultiplicar = (num) => {
 // console.log(tablaMultiplicar(5));
 tablaMultiplicar(2);
 
-            //---------> ↓↓↓↓↓↓↓↓ <-----------//
+//---------> ↓↓↓↓↓↓↓↓ <-----------//
 
 //Funcion que corrobora que si el numero sumna 8 da true , si no da false
 
@@ -130,7 +130,7 @@ const sumarNumero = (num, requieredSum) => {
 
 console.log(sumarNumero(num, requiredSum));
 
-            //---------> ↓↓↓↓↓↓↓↓ <-----------//
+//---------> ↓↓↓↓↓↓↓↓ <-----------//
 
 //Misma Logica que la anterior solo que este te da true porque suma 8
 let nums2 = [1, 2, 4, 4];
@@ -153,7 +153,7 @@ const sumarArray = (array, requiredSumm) => {
 console.log(sumarArray(nums2, requiredSumm));
 
 
-            //---------> ↓↓↓↓↓↓↓↓ <-----------//
+//---------> ↓↓↓↓↓↓↓↓ <-----------//
 
 // contar la suma de los numeros pares y guardar en un array solo los numeros pares
 let numeroPar = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -191,10 +191,10 @@ sumaNumeroPar(numeroPar);
 // son iguales o mayores a 1000 debe retornar ingresos * 40%. 
 // De lo contrario retornar 0.
 
-const calcularImpuesto = (edad , ingresos) =>{
+const calcularImpuesto = (edad, ingresos) => {
 
-    if(edad >= 18 && ingresos >= 1000){
-        
+    if (edad >= 18 && ingresos >= 1000) {
+
         return ingresos * 50 / 100
     } else {
 
@@ -202,25 +202,25 @@ const calcularImpuesto = (edad , ingresos) =>{
     }
 }
 
-console.log(calcularImpuesto(25,2000));
+console.log(calcularImpuesto(25, 2000));
 
 //-------------------------> ↓↓↓↓↓↓↓↓ <-------------------------------//
 
 //crear una funcion que sume todos los numeros que hay en un array
 
-let sumaNum = [10,20,30,40,50,60,70,80,90,100]
+let sumaNum = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 
 const sumaLista = (array) => {
-    
+
     let resultado = 0;
 
-    for(let i = 0 ; i < array.length; i++){
+    for (let i = 0; i < array.length; i++) {
 
         resultado += array[i]
     }
 
     console.log(resultado);
-    
+
 }
 
 sumaLista(sumaNum)
@@ -231,16 +231,16 @@ sumaLista(sumaNum)
 // como argumento se encuentra contenida dentro de un array de 
 // letras que se le pasa como segundo argumento.
 
-let letras = ["a","c","e","g","i","j"]
+let letras = ["a", "c", "e", "g", "i", "j"]
 
-const arrayLetras = (array,string) => {
+const arrayLetras = (array, string) => {
 
     let result = true;
-    for (let i = 0; i < array.length; i++){
-        if(array[i].includes(string)){
+    for (let i = 0; i < array.length; i++) {
+        if (array[i].includes(string)) {
 
             return result;
-        } else{
+        } else {
             return false;
         }
     }
@@ -248,8 +248,8 @@ const arrayLetras = (array,string) => {
 
 }
 
-console.log(arrayLetras(letras,"a"));
-console.log(arrayLetras(letras,"b"));
+console.log(arrayLetras(letras, "a"));
+console.log(arrayLetras(letras, "b"));
 
 
 //-------------------------> ↓↓↓↓↓↓↓↓ <-------------------------------//
@@ -257,13 +257,13 @@ console.log(arrayLetras(letras,"b"));
 
 // let vocales = ["a","e","i","o","u"];
 
-const esVocal = (string) =>{
-    let vocales = ["a","e","i","o","u"];
+const esVocal = (string) => {
+    let vocales = ["a", "e", "i", "o", "u"];
 
 
-    for(let i = 0; i <= vocales.length;i++ ){
+    for (let i = 0; i <= vocales.length; i++) {
 
-        if( vocales[i].includes(string)){
+        if (vocales[i].includes(string)) {
 
             return true;
         } else {
@@ -284,10 +284,10 @@ console.log(esVocal("a"));
 // invertida.
 let string = "hola a todos como estan"
 const invertirString = (string) => {
-console.log(string);
+    console.log(string);
 
 
-    return  string.split("").reverse().join("")
+    return string.split("").reverse().join("")
 }
 
 
@@ -302,7 +302,7 @@ console.log(invertirString(string));
 const capicua = (string) => {
 
 
-    if(string == string.split("").reverse().join("")){
+    if (string == string.split("").reverse().join("")) {
 
         return true
     } else {
@@ -311,3 +311,45 @@ const capicua = (string) => {
 }
 
 console.log(capicua("radar"));
+
+//-------------------------> ↓↓↓↓↓↓↓↓ <-------------------------------//
+
+//FizzBuz 
+// Escribe un programa que imprima los números del 1 al 100, pero:
+//Para múltiplos de 3, imprime "Fizz".
+//Para múltiplos de 5, imprime "Buzz".
+//Para múltiplos de ambos, imprime "FizzBuzz".
+
+
+const fizzBuzz = () => {
+
+    let multiplosDeTres = [];
+    let multiplosDeCinco = [];
+
+    for (let i = 1; i <= 100; i++) {
+        if (i % 3 === 0) {
+            // console.log("Fizz");
+            multiplosDeTres.push(i)
+           
+        } else if (i % 5 === 0) {
+            // console.log("Buzz");
+            multiplosDeCinco.push(i)
+          
+        } else {
+            // console.log("fizzBuzz");
+
+        }
+
+    }
+
+    console.log(multiplosDeTres);
+    console.log(multiplosDeCinco);
+    
+    
+
+}
+
+fizzBuzz()
+
+
+//-------------------------> ↓↓↓↓↓↓↓↓ <-------------------------------//

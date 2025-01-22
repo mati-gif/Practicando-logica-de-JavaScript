@@ -376,7 +376,7 @@ console.log("---------------------------------------------------");
 
 //Funcion que recorre un array y mete en otro los elementos que no estan repetidos 
 
-let numeroRepetidos = [1,2,5,4,1,2,5,8,7,8,9,6,3,2,1,5,4,7,8,5,2,1,4,2,3,6,6,5,8,7,4,10,50,45,789]
+let numeroRepetidos = [1,2,5,4,1,2,5,8,780,7,8,9,6,3,2,1,5,4,7,8,5,2,1,4,2,3,6,6,5,8,7,4,10,50,45,789]
 
 const noRepetidos = (array) =>{
 
@@ -389,6 +389,9 @@ const noRepetidos = (array) =>{
             nuevoArray.push(array[i]);
         }
     }
+    nuevoArray.sort((a,b)=>{
+        return  a - b
+    });
     
     return nuevoArray
 }
@@ -398,3 +401,31 @@ const noRepetidos = (array) =>{
  console.log(noRepetidos(numeroRepetidos));
  
 
+console.log("---------------------------------------------------");
+
+//-------------------------> ↓↓↓↓↓↓↓↓ <-------------------------------//
+
+//Funcion que pone dentro de un array todos los numeros solo 1 vez y luego los ordena 
+
+let arrayNum = [1,1,1,1,123,5,6,677,7,8,9,5,22,4,1,2,5,4,5,9]
+
+const buscarNum = (array) =>{
+
+    
+    
+    let arrayALLenar = []
+
+    for(let i = 0; i < array.length ; i++){
+        if(!arrayALLenar.includes(array[i])){
+            arrayALLenar.push(array[i])
+        }
+    }
+
+    let resultadoFinal = arrayALLenar.sort((a,b) =>{
+        return a - b 
+    })
+    console.log(resultadoFinal);
+    
+}
+
+buscarNum(arrayNum);

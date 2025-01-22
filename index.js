@@ -276,3 +276,25 @@ const esVocal = (string) =>{
 console.log(esVocal("z"));
 console.log(esVocal("a"));
 
+//-------------------------> ↓↓↓↓↓↓↓↓ <-------------------------------//
+
+//Invertir una cadena
+//Descripción: Escribe una función que tome una 
+// cadena como entrada y devuelva la cadena 
+// invertida.
+let string = "hola a todos como estan"
+const invertirString = (string) => {
+console.log(string);
+
+
+    return  string.split("").reverse().join("")
+}
+
+
+console.log(invertirString(string));
+
+//-------------------------> ↓↓↓↓↓↓↓↓ <-------------------------------//
+
+//6. Palíndromos
+//Descripción: Comprueba si una palabra es un palíndromo 
+// (se lee igual al derecho y al revés).

@@ -224,3 +224,55 @@ const sumaLista = (array) => {
 }
 
 sumaLista(sumaNum)
+
+//-------------------------> ↓↓↓↓↓↓↓↓ <-------------------------------//
+
+//Escribe una función que determina si la letra que se le pasa 
+// como argumento se encuentra contenida dentro de un array de 
+// letras que se le pasa como segundo argumento.
+
+let letras = ["a","c","e","g","i","j"]
+
+const arrayLetras = (array,string) => {
+
+    let result = true;
+    for (let i = 0; i < array.length; i++){
+        if(array[i].includes(string)){
+
+            return result;
+        } else{
+            return false;
+        }
+    }
+
+
+}
+
+console.log(arrayLetras(letras,"a"));
+console.log(arrayLetras(letras,"b"));
+
+
+//-------------------------> ↓↓↓↓↓↓↓↓ <-------------------------------//
+//Crear una funcion que devuelva true si es vocal y false si no lo es .
+
+// let vocales = ["a","e","i","o","u"];
+
+const esVocal = (string) =>{
+    let vocales = ["a","e","i","o","u"];
+
+
+    for(let i = 0; i <= vocales.length;i++ ){
+
+        if( vocales[i].includes(string)){
+
+            return true;
+        } else {
+
+            return false
+        }
+    }
+}
+
+console.log(esVocal("z"));
+console.log(esVocal("a"));
+

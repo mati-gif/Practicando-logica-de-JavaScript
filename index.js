@@ -368,3 +368,33 @@ const ordernarNum = (array) =>{
 }
 
 console.log(ordernarNum(ordenarNums))
+
+console.log("---------------------------------------------------");
+
+
+//-------------------------> ↓↓↓↓↓↓↓↓ <-------------------------------//
+
+//Funcion que recorre un array y mete en otro los elementos que no estan repetidos 
+
+let numeroRepetidos = [1,2,5,4,1,2,5,8,7,8,9,6,3,2,1,5,4,7,8,5,2,1,4,2,3,6,6,5,8,7,4,10,50,45,789]
+
+const noRepetidos = (array) =>{
+
+    let nuevoArray = [];
+    
+
+    for (let i = 0; i < array.length; i++) {
+        // Verificar si el número está una sola vez en el arreglo original
+        if (array.filter(num => num === array[i]).length === 1) {
+            nuevoArray.push(array[i]);
+        }
+    }
+    
+    return nuevoArray
+}
+
+//  noRepetidos(numeroRepetidos)
+
+ console.log(noRepetidos(numeroRepetidos));
+ 
+

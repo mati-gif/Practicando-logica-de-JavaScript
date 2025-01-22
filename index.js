@@ -351,5 +351,20 @@ const fizzBuzz = () => {
 
 fizzBuzz()
 
+console.log("---------------------------------------------------");
 
 //-------------------------> ↓↓↓↓↓↓↓↓ <-------------------------------//
+
+// ordenar los numeros de un array de manera ascendente
+
+
+let ordenarNums = [1,2,3,4,5,6,7,8,9,5,4,2,3,5,4,7]
+
+const ordernarNum = (array) =>{
+
+
+    let result =  array.sort( (a,b) => a - b )
+    return result 
+}
+
+console.log(ordernarNum(ordenarNums))

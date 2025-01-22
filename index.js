@@ -453,3 +453,28 @@ const buscarNumMenor = (array) =>{
 }
 
 buscarNumMenor(numMenor);
+
+console.log("---------------------------------------------------");
+
+//-------------------------> ↓↓↓↓↓↓↓↓ <-------------------------------//
+//Asignar índices del alfabeto
+//Descripción: Escribe una función que reciba un string 
+// y devuelva un arreglo con los índices de cada letra 
+// basados en el alfabeto (a=1, b=2, ..., z=26).
+
+let palabra = "Bienvenido";
+
+const reemplazarPalabra = (string) => {
+
+    let arrayIndices = [];
+    for (let letra of string.toLowerCase()) {
+        if (letra >= 'a' && letra <= 'z') {
+            arrayIndices.push(letra.charCodeAt(0) - 96); // 'a' tiene código 97
+        }
+      }
+
+
+return arrayIndices
+}
+
+console.log(reemplazarPalabra(palabra));

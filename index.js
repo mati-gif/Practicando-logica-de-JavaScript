@@ -298,3 +298,16 @@ console.log(invertirString(string));
 //6. Palíndromos
 //Descripción: Comprueba si una palabra es un palíndromo 
 // (se lee igual al derecho y al revés).
+
+const capicua = (string) => {
+
+
+    if(string == string.split("").reverse().join("")){
+
+        return true
+    } else {
+        return false
+    }
+}
+
+console.log(capicua("radar"));

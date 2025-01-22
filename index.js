@@ -429,3 +429,27 @@ const buscarNum = (array) =>{
 }
 
 buscarNum(arrayNum);
+
+
+console.log("---------------------------------------------------");
+
+//-------------------------> ↓↓↓↓↓↓↓↓ <-------------------------------//
+//Funcion que devuelve el numero menor de un array.
+
+let numMenor = [5,7,8,4,2,3,6,1,-80,0,-2,-4,4,-1,7,-10,9]
+
+const buscarNumMenor = (array) =>{
+
+    let menor = array[0];
+
+    for(let i = 1 ; i < array.length ; i++){
+        if(array[i] < menor ){
+            menor = array[i]
+        }
+    }
+
+    console.log(menor);
+    
+}
+
+buscarNumMenor(numMenor);

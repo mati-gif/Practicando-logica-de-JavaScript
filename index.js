@@ -206,5 +206,21 @@ console.log(calcularImpuesto(25,2000));
 
 //-------------------------> ↓↓↓↓↓↓↓↓ <-------------------------------//
 
+//crear una funcion que sume todos los numeros que hay en un array
 
+let sumaNum = [10,20,30,40,50,60,70,80,90,100]
 
+const sumaLista = (array) => {
+    
+    let resultado = 0;
+
+    for(let i = 0 ; i < array.length; i++){
+
+        resultado += array[i]
+    }
+
+    console.log(resultado);
+    
+}
+
+sumaLista(sumaNum)

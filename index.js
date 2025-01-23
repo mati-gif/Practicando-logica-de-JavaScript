@@ -1,5 +1,6 @@
 console.log("hola mundoo");
 
+console.log("//-------------------> ↓↓↓↓↓↓↓↓ <----------------//");
 
 //funcion que devuelve la suma de los numeros dentro del array
 let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10];
@@ -15,6 +16,7 @@ const suma = (array) => {
 
 suma(array);
 
+console.log("//-------------------> ↓↓↓↓↓↓↓↓ <----------------//");
 
 //-------------------------> ↓↓↓↓↓↓↓↓ <-------------------------------//
 
@@ -34,6 +36,8 @@ const numeroMayor = (nums) => {
 };
 
 numeroMayor(nums);
+
+console.log("//-------------------> ↓↓↓↓↓↓↓↓ <----------------//");
 
 //-------------------------> ↓↓↓↓↓↓↓↓ <-------------------------------//
 
@@ -64,6 +68,8 @@ const productosFiltrados = (array, string) => {
 productosFiltrados(productos, "choco");
 
 
+console.log("//-------------------> ↓↓↓↓↓↓↓↓ <----------------//");
+
 //-------------------------> ↓↓↓↓↓↓↓↓ <-----------//
 
 //funcion que ordena en forma ascendente o desendente segun como se le pase el parametro
@@ -93,6 +99,8 @@ funcionOrdenar(ordenarNumeros, "asc");
 console.log(funcionOrdenar(ordenarNumeros, "asc"));
 
 
+console.log("//-------------------> ↓↓↓↓↓↓↓↓ <----------------//");
+
 //---------> ↓↓↓↓↓↓↓↓ <-----------//
 
 //Generar una tabla de multiplicar
@@ -105,6 +113,9 @@ const tablaMultiplicar = (num) => {
 
 // console.log(tablaMultiplicar(5));
 tablaMultiplicar(2);
+
+
+console.log("//-------------------> ↓↓↓↓↓↓↓↓ <----------------//");
 
 //---------> ↓↓↓↓↓↓↓↓ <-----------//
 
@@ -130,6 +141,9 @@ const sumarNumero = (num, requieredSum) => {
 
 console.log(sumarNumero(num, requiredSum));
 
+
+console.log("//-------------------> ↓↓↓↓↓↓↓↓ <----------------//");
+
 //---------> ↓↓↓↓↓↓↓↓ <-----------//
 
 //Misma Logica que la anterior solo que este te da true porque suma 8
@@ -152,6 +166,9 @@ const sumarArray = (array, requiredSumm) => {
 
 console.log(sumarArray(nums2, requiredSumm));
 
+
+
+console.log("//-------------------> ↓↓↓↓↓↓↓↓ <----------------//");
 
 //---------> ↓↓↓↓↓↓↓↓ <-----------//
 
@@ -183,6 +200,9 @@ const sumaNumeroPar = (array) => {
 sumaNumeroPar(numeroPar);
 
 
+
+console.log("//-------------------> ↓↓↓↓↓↓↓↓ <----------------//");
+
 //-------------------------> ↓↓↓↓↓↓↓↓ <-------------------------------//
 
 //Escribir una función llamada calcularImpuestos que reciba dos argumentos numéricos: 
@@ -204,6 +224,9 @@ const calcularImpuesto = (edad, ingresos) => {
 
 console.log(calcularImpuesto(25, 2000));
 
+
+console.log("//-------------------> ↓↓↓↓↓↓↓↓ <----------------//");
+
 //-------------------------> ↓↓↓↓↓↓↓↓ <-------------------------------//
 
 //crear una funcion que sume todos los numeros que hay en un array
@@ -224,6 +247,9 @@ const sumaLista = (array) => {
 }
 
 sumaLista(sumaNum)
+
+
+console.log("//-------------------> ↓↓↓↓↓↓↓↓ <----------------//");
 
 //-------------------------> ↓↓↓↓↓↓↓↓ <-------------------------------//
 
@@ -252,6 +278,9 @@ console.log(arrayLetras(letras, "a"));
 console.log(arrayLetras(letras, "b"));
 
 
+
+console.log("//-------------------> ↓↓↓↓↓↓↓↓ <----------------//");
+
 //-------------------------> ↓↓↓↓↓↓↓↓ <-------------------------------//
 //Crear una funcion que devuelva true si es vocal y false si no lo es .
 
@@ -276,6 +305,9 @@ const esVocal = (string) => {
 console.log(esVocal("z"));
 console.log(esVocal("a"));
 
+
+console.log("//-------------------> ↓↓↓↓↓↓↓↓ <----------------//");
+
 //-------------------------> ↓↓↓↓↓↓↓↓ <-------------------------------//
 
 //Invertir una cadena
@@ -292,6 +324,9 @@ const invertirString = (string) => {
 
 
 console.log(invertirString(string));
+
+
+console.log("//-------------------> ↓↓↓↓↓↓↓↓ <----------------//");
 
 //-------------------------> ↓↓↓↓↓↓↓↓ <-------------------------------//
 
@@ -311,6 +346,10 @@ const capicua = (string) => {
 }
 
 console.log(capicua("radar"));
+
+
+
+console.log("//-------------------> ↓↓↓↓↓↓↓↓ <----------------//");
 
 //-------------------------> ↓↓↓↓↓↓↓↓ <-------------------------------//
 
@@ -478,3 +517,54 @@ return arrayIndices
 }
 
 console.log(reemplazarPalabra(palabra));
+
+console.log("---------------------------------------------------");
+
+
+//-------------------------> ↓↓↓↓↓↓↓↓ <-------------------------------//
+
+
+//Escribe una función que cuente cuántas vocales tiene un string dado.
+
+let vocales = "Electrico"
+
+const contarVocales = (string) =>{
+
+    let contador = 0; 
+    let vocales = "aeiou"
+
+
+    for(let buscarVocales of string ){
+
+        // console.log(buscarVocales);
+        if(vocales.includes(buscarVocales.toLowerCase())){
+            contador ++;
+        }
+        
+    }
+
+    console.log(contador);
+    
+}
+
+// console.log(contarVocales(vocales));
+contarVocales(vocales)
+
+
+console.log("//-------------------> ↓↓↓↓↓↓↓↓ <----------------//");
+
+//-------------------------> ↓↓↓↓↓↓↓↓ <-------------------------------//
+
+// Escribe una función que reciba un arreglo de 
+// números y devuelva el arreglo invertido.
+
+let arrayNumInvertido = [1,2,3,4,5,6,7,8,9,10]
+
+const invertirNumeros = (array) =>{
+
+    array.reverse().join("")
+
+    return array
+}
+
+console.log(invertirNumeros(arrayNumInvertido));

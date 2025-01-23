@@ -606,3 +606,59 @@ console.log(buscarPalabraMasLarga(palabraMasLarga));
 console.log("//-------------------> ↓↓↓↓↓↓↓↓ <----------------//");
 
 //-------------------------> ↓↓↓↓↓↓↓↓ <-------------------------------//
+//Hacer una funcion , que reciba un array y un numero entero ,por cada numero en el array se tiene que sumar uno
+
+let arrayNumero = [4,80,77,65,631]
+
+const devolverArray = (array,num) =>{
+
+    let nuevoArray = [];
+
+    for(let i = 0; i < array.length; i++){
+
+        let resultado  = array[i] + num;
+
+        nuevoArray.push(resultado)
+
+    }
+
+    console.log(nuevoArray);
+    
+}
+
+devolverArray(arrayNumero,10)
+
+
+console.log("//-------------------> ↓↓↓↓↓↓↓↓ <----------------//");
+
+//-------------------------> ↓↓↓↓↓↓↓↓ <-------------------------------//
+
+
+const buscarContraseña = (contraseña,numIntentos) => {
+
+    let correctPassword = false;
+    for(let i = 1; i <= numIntentos;i++){
+
+        let ingreseContraseña = prompt("Ingrese la contraseña")
+        console.log(ingreseContraseña);
+
+        if(ingreseContraseña === contraseña){
+
+            correctPassword = true ; 
+
+            alert("contraseña correcta")
+            return ;
+        } 
+    }
+
+    if(correctPassword == false){
+
+        console.log("contraseña incorrecta");
+        
+    }
+
+}
+
+
+// console.log(buscarContraseña("hola",3));
+buscarContraseña("hola",3)

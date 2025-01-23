@@ -562,9 +562,47 @@ let arrayNumInvertido = [1,2,3,4,5,6,7,8,9,10]
 
 const invertirNumeros = (array) =>{
 
-    array.reverse().join("")
+    array.reverse();
 
     return array
 }
 
 console.log(invertirNumeros(arrayNumInvertido));
+
+
+console.log("//-------------------> ↓↓↓↓↓↓↓↓ <----------------//");
+
+//-------------------------> ↓↓↓↓↓↓↓↓ <-------------------------------//
+
+//Escribe una función que reciba un string y devuelva la palabra más larga.
+
+let palabraMasLarga = "El dia mas caluroso de todos"
+
+const buscarPalabraMasLarga = (string) => {
+
+    
+    let stringAArray =  string.split(" ")
+    let nuevaPalabra = stringAArray[0];
+
+    // console.log(nuevaPalabra);
+
+    for(let i = 1; i < stringAArray.length ; i++  ){
+
+        if(stringAArray[i].length > nuevaPalabra.length ){
+
+            nuevaPalabra = stringAArray[i]
+        }
+
+    }
+    
+    return nuevaPalabra
+
+    
+}
+
+console.log(buscarPalabraMasLarga(palabraMasLarga));
+ 
+
+console.log("//-------------------> ↓↓↓↓↓↓↓↓ <----------------//");
+
+//-------------------------> ↓↓↓↓↓↓↓↓ <-------------------------------//

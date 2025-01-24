@@ -176,6 +176,7 @@ console.log("//-------------------> ↓↓↓↓↓↓↓↓ <----------------//
 let numeroPar = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const sumaNumeroPar = (array) => {
+    let totalNumerosPares = 0;
     let contador = 0;
     let nuevoArray = [];
     let arrayImpar = [];
@@ -185,12 +186,14 @@ const sumaNumeroPar = (array) => {
         if (array[i] % 2 === 0) {
             contador += array[i];
             nuevoArray.push(array[i]);
+            totalNumerosPares++
         } else if (array[i] % 2 === 1) {
             contador2 += array[i];
             arrayImpar.push(array[i]);
         }
     }
 
+    console.log(totalNumerosPares);
     console.log(arrayImpar);
     console.log(contador2);
     console.log(contador);
@@ -208,7 +211,7 @@ console.log("//-------------------> ↓↓↓↓↓↓↓↓ <----------------//
 //Escribir una función llamada calcularImpuestos que reciba dos argumentos numéricos: 
 // edad e ingresos. 
 // Si edad es igual o mayor a 18 y los ingresos 
-// son iguales o mayores a 1000 debe retornar ingresos * 40%. 
+// son iguales o mayores a 1000 debe retornar ingresos * 50%. 
 // De lo contrario retornar 0.
 
 const calcularImpuesto = (edad, ingresos) => {
@@ -369,11 +372,11 @@ const fizzBuzz = () => {
         if (i % 3 === 0) {
             // console.log("Fizz");
             multiplosDeTres.push(i)
-           
+
         } else if (i % 5 === 0) {
             // console.log("Buzz");
             multiplosDeCinco.push(i)
-          
+
         } else {
             // console.log("fizzBuzz");
 
@@ -383,8 +386,8 @@ const fizzBuzz = () => {
 
     console.log(multiplosDeTres);
     console.log(multiplosDeCinco);
-    
-    
+
+
 
 }
 
@@ -397,13 +400,13 @@ console.log("---------------------------------------------------");
 // ordenar los numeros de un array de manera ascendente
 
 
-let ordenarNums = [1,2,3,4,5,6,7,8,9,5,4,2,3,5,4,7]
+let ordenarNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 5, 4, 2, 3, 5, 4, 7]
 
-const ordernarNum = (array) =>{
+const ordernarNum = (array) => {
 
 
-    let result =  array.sort( (a,b) => a - b )
-    return result 
+    let result = array.sort((a, b) => a - b)
+    return result
 }
 
 console.log(ordernarNum(ordenarNums))
@@ -415,12 +418,12 @@ console.log("---------------------------------------------------");
 
 //Funcion que recorre un array y mete en otro los elementos que no estan repetidos 
 
-let numeroRepetidos = [1,2,5,4,1,2,5,8,780,7,8,9,6,3,2,1,5,4,7,8,5,2,1,4,2,3,6,6,5,8,7,4,10,50,45,789]
+let numeroRepetidos = [1, 2, 5, 4, 1, 2, 5, 8, 780, 7, 8, 9, 6, 3, 2, 1, 5, 4, 7, 8, 5, 2, 1, 4, 2, 3, 6, 6, 5, 8, 7, 4, 10, 50, 45, 789]
 
-const noRepetidos = (array) =>{
+const noRepetidos = (array) => {
 
     let nuevoArray = [];
-    
+
 
     for (let i = 0; i < array.length; i++) {
         // Verificar si el número está una sola vez en el arreglo original
@@ -428,17 +431,17 @@ const noRepetidos = (array) =>{
             nuevoArray.push(array[i]);
         }
     }
-    nuevoArray.sort((a,b)=>{
-        return  a - b
+    nuevoArray.sort((a, b) => {
+        return a - b
     });
-    
+
     return nuevoArray
 }
 
 //  noRepetidos(numeroRepetidos)
 
- console.log(noRepetidos(numeroRepetidos));
- 
+console.log(noRepetidos(numeroRepetidos));
+
 
 console.log("---------------------------------------------------");
 
@@ -446,25 +449,25 @@ console.log("---------------------------------------------------");
 
 //Funcion que pone dentro de un array todos los numeros solo 1 vez y luego los ordena 
 
-let arrayNum = [1,1,1,1,123,5,6,677,7,8,9,5,22,4,1,2,5,4,5,9]
+let arrayNum = [1, 1, 1, 1, 123, 5, 6, 677, 7, 8, 9, 5, 22, 4, 1, 2, 5, 4, 5, 9]
 
-const buscarNum = (array) =>{
+const buscarNum = (array) => {
 
-    
-    
+
+
     let arrayALLenar = []
 
-    for(let i = 0; i < array.length ; i++){
-        if(!arrayALLenar.includes(array[i])){
+    for (let i = 0; i < array.length; i++) {
+        if (!arrayALLenar.includes(array[i])) {
             arrayALLenar.push(array[i])
         }
     }
 
-    let resultadoFinal = arrayALLenar.sort((a,b) =>{
-        return a - b 
+    let resultadoFinal = arrayALLenar.sort((a, b) => {
+        return a - b
     })
     console.log(resultadoFinal);
-    
+
 }
 
 buscarNum(arrayNum);
@@ -475,20 +478,20 @@ console.log("---------------------------------------------------");
 //-------------------------> ↓↓↓↓↓↓↓↓ <-------------------------------//
 //Funcion que devuelve el numero menor de un array.
 
-let numMenor = [5,7,8,4,2,3,6,1,-80,0,-2,-4,4,-1,7,-10,9]
+let numMenor = [5, 7, 8, 4, 2, 3, 6, 1, -80, 0, -2, -4, 4, -1, 7, -10, 9]
 
-const buscarNumMenor = (array) =>{
+const buscarNumMenor = (array) => {
 
     let menor = array[0];
 
-    for(let i = 1 ; i < array.length ; i++){
-        if(array[i] < menor ){
+    for (let i = 1; i < array.length; i++) {
+        if (array[i] < menor) {
             menor = array[i]
         }
     }
 
     console.log(menor);
-    
+
 }
 
 buscarNumMenor(numMenor);
@@ -510,10 +513,10 @@ const reemplazarPalabra = (string) => {
         if (letra >= 'a' && letra <= 'z') {
             arrayIndices.push(letra.charCodeAt(0) - 96); // 'a' tiene código 97
         }
-      }
+    }
 
 
-return arrayIndices
+    return arrayIndices
 }
 
 console.log(reemplazarPalabra(palabra));
@@ -528,23 +531,23 @@ console.log("---------------------------------------------------");
 
 let vocales = "Electrico"
 
-const contarVocales = (string) =>{
+const contarVocales = (string) => {
 
-    let contador = 0; 
+    let contador = 0;
     let vocales = "aeiou"
 
 
-    for(let buscarVocales of string ){
+    for (let buscarVocales of string) {
 
         // console.log(buscarVocales);
-        if(vocales.includes(buscarVocales.toLowerCase())){
-            contador ++;
+        if (vocales.includes(buscarVocales.toLowerCase())) {
+            contador++;
         }
-        
+
     }
 
     console.log(contador);
-    
+
 }
 
 // console.log(contarVocales(vocales));
@@ -558,9 +561,9 @@ console.log("//-------------------> ↓↓↓↓↓↓↓↓ <----------------//
 // Escribe una función que reciba un arreglo de 
 // números y devuelva el arreglo invertido.
 
-let arrayNumInvertido = [1,2,3,4,5,6,7,8,9,10]
+let arrayNumInvertido = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-const invertirNumeros = (array) =>{
+const invertirNumeros = (array) => {
 
     array.reverse();
 
@@ -580,53 +583,53 @@ let palabraMasLarga = "El dia mas caluroso de todos"
 
 const buscarPalabraMasLarga = (string) => {
 
-    
-    let stringAArray =  string.split(" ")
+
+    let stringAArray = string.split(" ")
     let nuevaPalabra = stringAArray[0];
 
     // console.log(nuevaPalabra);
 
-    for(let i = 1; i < stringAArray.length ; i++  ){
+    for (let i = 1; i < stringAArray.length; i++) {
 
-        if(stringAArray[i].length > nuevaPalabra.length ){
+        if (stringAArray[i].length > nuevaPalabra.length) {
 
             nuevaPalabra = stringAArray[i]
         }
 
     }
-    
+
     return nuevaPalabra
 
-    
+
 }
 
 console.log(buscarPalabraMasLarga(palabraMasLarga));
- 
+
 
 console.log("//-------------------> ↓↓↓↓↓↓↓↓ <----------------//");
 
 //-------------------------> ↓↓↓↓↓↓↓↓ <-------------------------------//
 //Hacer una funcion , que reciba un array y un numero entero ,por cada numero en el array se tiene que sumar uno
 
-let arrayNumero = [4,80,77,65,631]
+let arrayNumero = [4, 80, 77, 65, 631]
 
-const devolverArray = (array,num) =>{
+const devolverArray = (array, num) => {
 
     let nuevoArray = [];
 
-    for(let i = 0; i < array.length; i++){
+    for (let i = 0; i < array.length; i++) {
 
-        let resultado  = array[i] + num;
+        let resultado = array[i] + num;
 
         nuevoArray.push(resultado)
 
     }
 
     console.log(nuevoArray);
-    
+
 }
 
-devolverArray(arrayNumero,10)
+devolverArray(arrayNumero, 10)
 
 
 console.log("//-------------------> ↓↓↓↓↓↓↓↓ <----------------//");
@@ -634,31 +637,121 @@ console.log("//-------------------> ↓↓↓↓↓↓↓↓ <----------------//
 //-------------------------> ↓↓↓↓↓↓↓↓ <-------------------------------//
 
 
-const buscarContraseña = (contraseña,numIntentos) => {
+// const buscarContraseña = (contraseña,numIntentos) => {
 
-    let correctPassword = false;
-    for(let i = 1; i <= numIntentos;i++){
+//     let correctPassword = false;
+//     for(let i = 1; i <= numIntentos;i++){
 
-        let ingreseContraseña = prompt("Ingrese la contraseña")
-        console.log(ingreseContraseña);
+//         // let ingreseContraseña = prompt("Ingrese la contraseña")
+//         console.log(ingreseContraseña);
 
-        if(ingreseContraseña === contraseña){
+//         if(ingreseContraseña === contraseña){
 
-            correctPassword = true ; 
+//             correctPassword = true ; 
 
-            alert("contraseña correcta")
-            return ;
-        } 
-    }
+//             alert("contraseña correcta")
+//             return ;
+//         } 
+//     }
 
-    if(correctPassword == false){
+//     if(correctPassword == false){
 
-        console.log("contraseña incorrecta");
-        
-    }
+//         console.log("contraseña incorrecta");
 
-}
+//     }
+
+// }
 
 
 // console.log(buscarContraseña("hola",3));
-buscarContraseña("hola",3)
+// buscarContraseña("hola",3)
+
+
+
+console.log("//-------------------> ↓↓↓↓↓↓↓↓ <----------------//");
+//-------------------------> ↓↓↓↓↓↓↓↓ <-------------------------------//
+
+
+const juego = (numeroRondas) => {
+
+    let rondasGanadas1 = 0;
+    let rondasGanadas2 = 0;
+
+    for (let i = 0; i <= numeroRondas; i++) {
+
+        let jugadasPlayer1 = Math.floor(Math.random() * 6)
+        let jugadasPlayer2 = Math.floor(Math.random() * 6)
+        console.log("player1 ", jugadasPlayer1);
+        console.log("player2 ", jugadasPlayer2);
+
+        if (jugadasPlayer1 > jugadasPlayer2) {
+
+            rondasGanadas1++
+        } else if (jugadasPlayer2 > jugadasPlayer1) {
+            rondasGanadas2++
+        } else {
+
+            console.log(`es empate porque ${jugadasPlayer1} es igual a ${jugadasPlayer2}`);
+
+        }
+
+    }
+
+    if (rondasGanadas1 > rondasGanadas2) {
+        console.log("Gano jugador 1 ");
+
+    } else if (rondasGanadas2 > rondasGanadas1) {
+        console.log("gano jugador 2 ");
+
+    } else {
+        console.log("empate");
+
+    }
+
+
+
+}
+
+juego(2)
+
+
+console.log("//-------------------> ↓↓↓↓↓↓↓↓ <----------------//");
+//-------------------------> ↓↓↓↓↓↓↓↓ <-------------------------------//
+//fUNCION QUE VERIFICA SI LOS NUMEROS DENTRO DE UN ARRAY SE REPITEN 1 O MAS VECES
+
+//Verificar si un número aparece al menos dos veces en un array,  retornar TRUE o FALSE .
+
+//Input: nums = [1,2,3,1]
+//Output: true
+
+//Input: nums = [1,2,3,4]
+//Output: false
+
+
+//Array 1 :
+
+const array1 = [1, 2, 3,1]
+const array2 = [1,2,3,4]
+
+const repetirNum = (array) => {
+
+    // console.log(array);
+
+
+    for (let i = 0; i < array.length; i++) {
+
+        for(let j = i + 1; j < array.length;j++){
+            if(array[i] === array[j]){
+                
+                return true
+            }
+        }
+    }
+    return false; // Si no encuentra repetidos, devuelve false
+
+}
+
+// repetirNum(array1)
+ console.log(repetirNum(array1));
+ console.log(repetirNum(array2));
+ 

@@ -755,3 +755,46 @@ const repetirNum = (array) => {
  console.log(repetirNum(array1));
  console.log(repetirNum(array2));
  
+console.log("//-------------------> ↓↓↓↓↓↓↓↓ <----------------//");
+console.log("//-------------------> ↓↓↓↓↓↓↓↓ <----------------//");
+console.log("//-------------------> ↓↓↓↓↓↓↓↓ <----------------//");
+console.log("//-------------------> ↓↓↓↓↓↓↓↓ <----------------//");
+console.log("//-------------------> ↓↓↓↓↓↓↓↓ <----------------//");
+console.log("//-------------------> ↓↓↓↓↓↓↓↓ <----------------//");
+console.log("//-------------------> ↓↓↓↓↓↓↓↓ <----------------//");
+console.log("//-------------------> ↓↓↓↓↓↓↓↓ <----------------//");
+console.log("//-------------------> ↓↓↓↓↓↓↓↓ <----------------//");
+console.log("//-------------------> ↓↓↓↓↓↓↓↓ <----------------//");
+console.log("//-------------------> ↓↓↓↓↓↓↓↓ <----------------//");
+console.log("//-------------------> ↓↓↓↓↓↓↓↓ <----------------//");
+
+
+
+const instructions = "RL"; // Puede repetirse si es necesario
+
+
+const nodes = {
+  AAA: ["BBB", "CCC"],
+  BBB: ["DDD", "EEE"],
+  CCC: ["ZZZ", "GGG"],
+  DDD: ["DDD", "DDD"],
+  EEE: ["EEE", "EEE"],
+  GGG: ["GGG", "GGG"],
+  ZZZ: ["ZZZ", "ZZZ"],
+};
+
+
+let currentNode = "AAA";
+let steps = 0;
+let instructionIndex = 0;
+
+
+while (currentNode !== "ZZZ" && steps < 50) {
+  let direction = instructions[instructionIndex]; // Obtener la instrucción actual
+  currentNode = direction === "L" ? nodes[currentNode][0] : nodes[currentNode][1]; // Moverse
+  steps++;
+  instructionIndex = (instructionIndex + 1) % instructions.length; // Si ya usamos todas las instrucciones, volvemos al inicio (% instructions.length crea un ciclo).
+}
+
+// 5. Imprimir resultado
+console.log(`Llegamos a ZZZ en ${steps} pasos.`);
